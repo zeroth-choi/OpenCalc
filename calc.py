@@ -8,8 +8,12 @@ def main():
     while True:
         choice = input("(1/2/3/4) 중에서 선택하세요: ")
         if choice in ('1', '2', '3', '4'):
-            num1 = int(input("첫번째 수: "))
-            num2 = int(input("두번째 수: "))
+            try:
+                num1 = int(input("첫번째 수: "))
+                num2 = int(input("두번째 수: "))
+            except ValueError:
+                print("숫자를 입력해야 합니다!")
+                continue
             if choice == '1':
                 print(num1, "+", num2, "=", ops.add(num1, num2))
             elif choice == '2':
