@@ -22,7 +22,11 @@ def main():
                 print(num1, "*", num2, "=", ops.multiply(num1, num2))
             elif choice == '4':
                 print(num1, "/", num2, "=", ops.divide(num1, num2))
+            redo = input("또 계산하겠습니까? (y/n): ")
+            if redo == "n":
+                print("종료합니다.")
+                break 
         else:
-            break
+            print("틀린 선택입니다.") 
 if __name__ == "__main__":
     main()
